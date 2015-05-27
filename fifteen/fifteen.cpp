@@ -310,6 +310,21 @@ void PrintTable()
 }
 
 
+
+void Table()
+{
+   for (int i = 0; i < 4; i++)
+      {
+          for (int j = 0; j < 4; j++)
+	     {
+		WriteDig(j * 7 + 3, i * 4 + 2, a[i][j]);
+	      }
+       }
+}
+
+
+
+
 int _tmain(int argc, _TCHAR* argv[])
 { 
 	PrintTable();
