@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "iostream"
 #include <windows.h>
+#include <conio.h>
 using namespace std;
 
 HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -326,15 +327,102 @@ void Table()
 
 
 int _tmain(int argc, _TCHAR* argv[])
-{ 
-	
+{
+	const int Esc = 27;
+	const int Top1 = 72;
+	const int Left1 = 75;
+	const int Right1 = 77;
+	const int Bottom1 = 80;
 
-	
+	int count = 0;
+	int wi = 0, wj = 0;
+	int i, j;
+	int code = 0;
 
 	PrintTable();
-	system("pause");
+	// знаходимо і запам'ятовуємо пусту комірок, щоб почати переміщення курсора
 
-	return 0;
 
-}
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			if (a[i][j] == 0)
+			{
+				wi = i;
+				wj = j;
+				break;
+			}
+		}
+	}
 
+	//хід переміщення курсора
+	int x = wj * 7 + 3, y = wi * 4 + 2;
+	count = 0;
+	do
+	{
+		Table();
+		WriteDig(x, y, 0);
+
+		code = getch();
+
+		if (code == 224)
+		{
+			code = getch();
+		}
+		switch (code)
+		{
+		case Top1:
+			if (wi != 0)
+			{
+				a[wi][wj] = a[wi - 1][wj];
+				a[wi - 1][wj] = 0;
+				wi--;
+				count++;
+				WriteDig(x, y -= 4, 0);
+			}
+			break;
+
+		case Bottom1:
+			if (wi < 3)
+			{
+				a[wi][wj] = a[wi + 1][wj];
+				a[wi + 1][wj] = 0;
+				wi++;
+				count++;
+				WriteDig(x, y += 4, 0);
+			}
+			break;
+
+		case Left1:
+			if (wj != 0)
+			{
+				a[wi][wj] = a[wi][wj - 1];
+				a[wi][wj - 1] = 0;
+				wj--;
+				count++;
+				WriteDig(x -= 7, y, 0);
+			}
+			break;
+
+		case Right1:
+			if (wj < 3)
+			{
+				a[wi][wj] = a[wi][wj + 1];
+				a[wi][wj + 1] = 0;
+				wj++;
+				count++;
+				WriteDig(x += 7, y, 0);
+			}
+			break;
+			system("cls");
+
+		}
+
+	} while (code != 27);
+
+		PrintTable();
+		system("pause");
+
+		return 0;
+	}
