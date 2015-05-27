@@ -53,7 +53,7 @@ void PrintTable()
 	const unsigned char Border = 0;
 
 
-	cout << Border_Top_Left;  //перший рядок комірок
+	cout << Border_Top_Left;  //Ð¿ÐµÑ€ÑˆÐ¸Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center;
@@ -115,7 +115,7 @@ void PrintTable()
 
 
 
-	cout << Border_Center_Left; //другий рядок комірок
+	cout << Border_Center_Left; //Ð´Ñ€ÑƒÐ³Ð¸Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center_Center;
@@ -175,7 +175,7 @@ void PrintTable()
 	cout << Border_Vert << endl;
 
 
-	cout << Border_Center_Left; //третій рядок комірок
+	cout << Border_Center_Left; //Ñ‚Ñ€ÐµÑ‚Ñ–Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center_Center;
@@ -235,7 +235,7 @@ void PrintTable()
 	cout << Border_Vert << endl;
 
 
-	cout << Border_Center_Left; //четвертий рядок комірок
+	cout << Border_Center_Left; //Ñ‡ÐµÑ‚Ð²ÐµÑ€Ñ‚Ð¸Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center_Center;
@@ -295,7 +295,7 @@ void PrintTable()
 	cout << Border_Vert << endl;
 
 	
-	cout << Border_Bottom_Left; // нижня границя
+	cout << Border_Bottom_Left; // Ð½Ð¸Ð¶Ð½Ñ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Bottom;
@@ -339,8 +339,86 @@ int _tmain(int argc, _TCHAR* argv[])
 	int i, j;
 	int code = 0;
 
+
+//підключаємо бібліотеку <time.h>
+// шукаємо 0, щоб почати
+
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			if (a[i][j] == 0)
+			{
+				wi = i;
+				wj = j;
+				break;
+			}
+		}
+	}
+	
+	//змішуємо числа 
+	srand((unsigned)time(NULL));
+
+	int code = 0;
+	const int Top = 1;
+	const int Left = 2;
+	const int Right = 3;
+	const int Bottom = 4;
+
+	do
+	{
+	    code = rand() % 4 + 1;
+		switch (code)
+		{
+	   	   case Top:
+			if (wi != 0)
+			{
+				a[wi][wj] = a[wi - 1][wj];
+				a[wi - 1][wj] = 0;
+				wi--;
+				count++;
+			}
+			break;
+
+		case Bottom:
+			if (wi < 3)
+			{
+				a[wi][wj] = a[wi + 1][wj];
+				a[wi + 1][wj] = 0;
+				wi++;
+				count++;
+			}
+			break;
+
+		case Left:
+			if (wj != 0)
+			{
+				a[wi][wj] = a[wi][wj - 1];
+				a[wi][wj - 1] = 0;
+				wj--;
+				count++;
+			}
+			break;
+
+		case Right:
+			if (wj < 3)
+			{
+				a[wi][wj] = a[wi][wj + 1];
+				a[wi][wj + 1] = 0;
+				wj++;
+				count++;
+			}
+			break;
+			system("cls");
+
+		}
+	} 
+	while (count < 2005);
+
+
+
 	PrintTable();
-	// ��������� � �����'������� ����� ������, ��� ������ ���������� �������
+	// çíàõîäèìî ³ çàïàì'ÿòîâóºìî ïóñòó êîì³ðîê, ùîá ïî÷àòè ïåðåì³ùåííÿ êóðñîðà
 
 
 	for (i = 0; i < 4; i++)
@@ -356,7 +434,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	}
 
-	//��� ���������� �������
+	//õ³ä ïåðåì³ùåííÿ êóðñîðà
 	int x = wj * 7 + 3, y = wi * 4 + 2;
 	count = 0;
 	do
