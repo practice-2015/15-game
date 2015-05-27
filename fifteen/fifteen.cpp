@@ -55,8 +55,15 @@ void PrintTable()
 		cout << Single_Horz;
 	cout << Single_Top_Right << endl;
 }
+
+
+
 int _tmain(int argc, _TCHAR* argv[])
 { 
+	
+
+	
+
 	PrintTable();
 	system("pause");
 
