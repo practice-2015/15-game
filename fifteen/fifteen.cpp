@@ -3,7 +3,25 @@
 
 #include "stdafx.h"
 #include "iostream"
+#include <windows.h>
 using namespace std;
+
+HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+
+void GotoXY(int X, int Y)
+{
+	COORD coord = { X, Y };
+	SetConsoleCursorPosition(hStdOut, coord);
+}
+
+void WriteDig(int X, int Y, int a)
+{
+	GotoXY(X, Y);
+	cout << "  " << flush;
+	GotoXY(X, Y);
+	if (a)
+		cout << a << flush;
+}
 
 void PrintTable()
 {
@@ -41,6 +59,7 @@ int _tmain(int argc, _TCHAR* argv[])
 { 
 	PrintTable();
 	system("pause");
+
 	return 0;
 
 }
