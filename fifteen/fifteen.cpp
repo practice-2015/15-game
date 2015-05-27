@@ -40,6 +40,7 @@ void PrintTable()
 int _tmain(int argc, _TCHAR* argv[])
 { 
 	PrintTable();
+	system("pause");
 	return 0;
 
 }
