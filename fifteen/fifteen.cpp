@@ -325,6 +325,27 @@ void Table()
 
 
 
+// чи правильно заповнена таблиця
+bool IsCorrect()
+{
+	bool Yes = false;
+	int count = 1;
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			if (count == 15)
+				break;
+
+			if (a[i][j] != count)
+				Yes = true;
+			count++;
+		}
+	}
+	return Yes;
+}
+
+
 
 int _tmain(int argc, _TCHAR* argv[])
 {
