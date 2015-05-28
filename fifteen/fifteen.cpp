@@ -399,12 +399,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	int count = 0;
 	int wi = 0, wj = 0;
 	int i, j;
-	
+	char str[2];
 	SetColor(LightRed, Black);
 	Tittle();
 	cout << ("\t\t\t\t  Press Enter:\b\b\b\b\b\b");
 	cin.getline(str, 2);
-	system("cls")
+	system("cls");
 	
 
 
