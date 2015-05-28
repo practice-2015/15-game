@@ -350,14 +350,7 @@ bool IsCorrect()
 	return Yes;
 }
 
-void Tittle()
-{
-	cout << ("\n\n\n\t\t\t************ 15  ************\n\n"
-		"\t\t\t\t  Version: I-24\n"
-		"\t\t\t\t  Fizmat Forever\n"
-		"\t\t\t\t  Will Be A Winner\n\n"
-		"\t\t------------------------------------------------\n");
-}
+
 
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -373,7 +366,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	int wi = 0, wj = 0;
 	int i, j;
 
-	Tittle();
+
 	system("pause");
 	cout << endl;
 
