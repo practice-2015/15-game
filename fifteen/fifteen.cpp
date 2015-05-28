@@ -47,7 +47,7 @@ void PrintTable()
 	const unsigned char Border = 0;
 
 
-	cout << Border_Top_Left;  //Ð¿ÐµÑ€ÑˆÐ¸Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
+	cout << Border_Top_Left;  
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center;
@@ -109,7 +109,7 @@ void PrintTable()
 
 
 
-	cout << Border_Center_Left; //Ð´Ñ€ÑƒÐ³Ð¸Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
+	cout << Border_Center_Left; 
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center_Center;
@@ -169,7 +169,7 @@ void PrintTable()
 	cout << Border_Vert << endl;
 
 
-	cout << Border_Center_Left; //Ñ‚Ñ€ÐµÑ‚Ñ–Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
+	cout << Border_Center_Left; 
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center_Center;
@@ -229,7 +229,7 @@ void PrintTable()
 	cout << Border_Vert << endl;
 
 
-	cout << Border_Center_Left; //Ñ‡ÐµÑ‚Ð²ÐµÑ€Ñ‚Ð¸Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
+	cout << Border_Center_Left; 
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center_Center;
@@ -289,7 +289,7 @@ void PrintTable()
 	cout << Border_Vert << endl;
 
 	
-	cout << Border_Bottom_Left; // Ð½Ð¸Ð¶Ð½Ñ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ
+	cout << Border_Bottom_Left; 
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Bottom;
