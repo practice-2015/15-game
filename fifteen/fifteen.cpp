@@ -329,7 +329,7 @@ void Table()
 
 
 
-// чи правильно заповнена таблиця
+
 bool IsCorrect()
 {
 	bool Yes = false;
@@ -373,8 +373,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	Tittle()
 
 
-//підключаємо бібліотеку <time.h>
-// шукаємо 0, щоб почати
 
 	for (i = 0; i < 4; i++)
 	{
@@ -389,7 +387,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	}
 	
-	//змішуємо числа 
+ 
 	srand((unsigned)time(NULL));
 
 	int code = 0;
@@ -467,7 +465,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	}
 
-	//õ³ä ïåðåì³ùåííÿ êóðñîðà
+
 	int x = wj * 7 + 3, y = wi * 4 + 2;
 	count = 0;
 	do
