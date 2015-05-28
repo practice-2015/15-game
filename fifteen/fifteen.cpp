@@ -403,7 +403,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	SetColor(LightRed, Black);
 	Tittle();
 	cout << ("\t\t\t\t  Press Enter:\b\b\b\b\b\b");
-	system("cls");
+	cin.getline(str, 2);
+	system("cls")
 	
 
 
