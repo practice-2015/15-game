@@ -359,7 +359,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	int count = 0;
 	int wi = 0, wj = 0;
 	int i, j;
-	int code = 0;
+	
 
 
 //підключаємо бібліотеку <time.h>
@@ -519,8 +519,21 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		}
 
-	} while (code != 27);
+		if (!IsCorrect())
+		{
+			system("cls");
 
+			for (int i = 0; i < 4; i++)
+			{
+				for (int j = 0; j < 4; j++)
+				{
+					a[i][j] = 0;
+				}
+
+			}
+		}
+	} while (code != 27);
+	
 		PrintTable();
 		system("pause");
 
