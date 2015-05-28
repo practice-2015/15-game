@@ -398,7 +398,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	int wi = 0, wj = 0;
 	int i, j;
 	
-	SetColor(LightMagenta, Black);
+	SetColor(LightRed, Black);
 	Tittle();
 	cout << ("\t\t\t\t  Press Enter:\b\b\b\b\b\b");
 	system("cls");
