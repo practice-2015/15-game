@@ -399,6 +399,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	int count = 0;
 	int wi = 0, wj = 0;
 	int i, j;
+	
+	SetColor(LightRed, Black);
+	Tittle();
+	cout << ("\t\t\t\t  Press Enter:\b\b\b\b\b\b");
+	system("cls");
+	
 
 
 //підключаємо бібліотеку <time.h>
@@ -478,8 +484,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 
+	SetColor(LightBlue, Black);
 	PrintTable();
-	
+	// çíàõîäèìî ³ çàïàì'ÿòîâóºìî ïóñòó êîì³ðîê, ùîá ïî÷àòè ïåðåì³ùåííÿ êóðñîðà
 
 
 	for (i = 0; i < 4; i++)
