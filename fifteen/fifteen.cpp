@@ -48,7 +48,7 @@ void PrintTable()
 	const unsigned char Border = 0;
 
 
-	cout << Border_Top_Left;  //Ð¿ÐµÑ€ÑˆÐ¸Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
+	cout << Border_Top_Left;  
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center;
@@ -110,7 +110,7 @@ void PrintTable()
 
 
 
-	cout << Border_Center_Left; //Ð´Ñ€ÑƒÐ³Ð¸Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
+	cout << Border_Center_Left; 
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center_Center;
@@ -170,7 +170,7 @@ void PrintTable()
 	cout << Border_Vert << endl;
 
 
-	cout << Border_Center_Left; //Ñ‚Ñ€ÐµÑ‚Ñ–Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
+	cout << Border_Center_Left; 
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center_Center;
@@ -230,7 +230,7 @@ void PrintTable()
 	cout << Border_Vert << endl;
 
 
-	cout << Border_Center_Left; //Ñ‡ÐµÑ‚Ð²ÐµÑ€Ñ‚Ð¸Ð¹ Ñ€ÑÐ´Ð¾Ðº ÐºÐ¾Ð¼Ñ–Ñ€Ð¾Ðº
+	cout << Border_Center_Left; 
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Center_Center;
@@ -290,7 +290,7 @@ void PrintTable()
 	cout << Border_Vert << endl;
 
 	
-	cout << Border_Bottom_Left; // Ð½Ð¸Ð¶Ð½Ñ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ
+	cout << Border_Bottom_Left; 
 	for (i = 1; i <= w - 2; i++)
 		cout << Border_Horz;
 	cout << Border_Bottom;
@@ -330,7 +330,7 @@ void Table()
 
 
 
-// чи правильно заповнена таблиця
+
 bool IsCorrect()
 {
 	bool Yes = false;
@@ -350,6 +350,40 @@ bool IsCorrect()
 	return Yes;
 }
 
+enum ConsoleColor
+{
+	Black = 0,
+	Blue = 1,
+	Green = 2,
+	Cyan = 3,
+	Red = 4,
+	Magenta = 5,
+	Brown = 6,
+	LightGray = 7,
+	YesrkGray = 8,
+	LightBlue = 9,
+	LightGreen = 10,
+	LightCyan = 11,
+	LightRed = 12,
+	LightMagenta = 13,
+	Yellow = 14,
+	White = 15
+};
+
+void SetColor(ConsoleColor text, ConsoleColor background)
+{
+	SetConsoleTextAttribute(hStdOut, (WORD)((background << 4) | text));
+}
+
+
+void Tittle()
+{
+	cout << ("\n\n\n\t\t\t************ 15  ************\n\n"
+		"\t\t\t\t  Version: I-24 \n"
+		"\t\t\t\t  Fizmat forever\n"
+		"\t\t\t\t  Will Be A Winner\n\n"
+		"\t\t------------------------------------------------\n");
+}
 
 
 
@@ -367,9 +401,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	int i, j;
 
 
-	system("pause");
-	cout << endl;
-
+//підключаємо бібліотеку <time.h>
+// шукаємо 0, щоб почати
 
 	for (i = 0; i < 4; i++)
 	{
@@ -384,7 +417,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	}
 	
-	//змішуємо числа 
+ 
 	srand((unsigned)time(NULL));
 
 	int code = 0;
@@ -462,7 +495,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	}
 
-	
+
 	int x = wj * 7 + 3, y = wi * 4 + 2;
 	count = 0;
 	do
