@@ -407,8 +407,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 
 
-//підключаємо бібліотеку <time.h>
-// шукаємо 0, щоб почати
 
 	for (i = 0; i < 4; i++)
 	{
@@ -486,7 +484,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	SetColor(LightBlue, Black);
 	PrintTable();
-	// çíàõîäèìî ³ çàïàì'ÿòîâóºìî ïóñòó êîì³ðîê, ùîá ïî÷àòè ïåðåì³ùåííÿ êóðñîðà
+
 
 
 	for (i = 0; i < 4; i++)
