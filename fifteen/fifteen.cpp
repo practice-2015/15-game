@@ -26,13 +26,6 @@ void WriteDig(int X, int Y, int a)
 }
 
 
-int a[4][4] =
-{
-	{ 1, 2, 3, 4 },
-	{ 5, 6, 7, 8 },
-	{ 9, 10, 11, 12 },
-	{ 13, 14, 15, 0 }
-};
 
 
 void PrintTable()
@@ -310,6 +303,16 @@ void PrintTable()
 		cout << Border_Horz;
 	cout << Border_Bottom_Right << endl;
 }
+
+
+
+int a[4][4] =
+{
+	{ 1, 2, 3, 4 },
+	{ 5, 6, 7, 8 },
+	{ 9, 10, 11, 12 },
+	{ 13, 14, 15, 0 }
+};
 
 
 
