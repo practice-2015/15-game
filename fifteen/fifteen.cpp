@@ -588,7 +588,8 @@ int _tmain(int argc, _TCHAR* argv[])
 			SetColor(LightRed, Black);
 		}
 	} while (code != 27);
-	
+
+	    cout << "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
 		system("pause");
 
 		return 0;
