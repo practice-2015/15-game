@@ -6,6 +6,7 @@
 #include <windows.h>
 #include <conio.h>
 #include <time.h>
+
 using namespace std;
 
 HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -349,10 +350,19 @@ bool IsCorrect()
 	return Yes;
 }
 
+void Tittle()
+{
+	cout << ("\n\n\n\t\t\t************ 15  ************\n\n"
+		"\t\t\t\t  Version: I-24\n"
+		"\t\t\t\t  Fizmat Forever\n"
+		"\t\t\t\t  Will Be A Winner\n\n"
+		"\t\t------------------------------------------------\n");
+}
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+
 	const int Esc = 27;
 	const int Top1 = 72;
 	const int Left1 = 75;
@@ -362,11 +372,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	int count = 0;
 	int wi = 0, wj = 0;
 	int i, j;
-	
 
+	Tittle();
+	system("pause");
+	cout << endl;
 
-//підключаємо бібліотеку <time.h>
-// шукаємо 0, щоб почати
 
 	for (i = 0; i < 4; i++)
 	{
@@ -443,7 +453,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 	PrintTable();
-	// çíàõîäèìî ³ çàïàì'ÿòîâóºìî ïóñòó êîì³ðîê, ùîá ïî÷àòè ïåðåì³ùåííÿ êóðñîðà
+	
 
 
 	for (i = 0; i < 4; i++)
@@ -459,7 +469,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	}
 
-	//õ³ä ïåðåì³ùåííÿ êóðñîðà
+	
 	int x = wj * 7 + 3, y = wi * 4 + 2;
 	count = 0;
 	do
