@@ -480,7 +480,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 
+	SetColor(LightBlue, Black);
 	PrintTable();
+	SetColor(LightRed, Black);
 	// çíàõîäèìî ³ çàïàì'ÿòîâóºìî ïóñòó êîì³ðîê, ùîá ïî÷àòè ïåðåì³ùåííÿ êóðñîðà
 
 
