@@ -397,7 +397,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	int count = 0;
 	int wi = 0, wj = 0;
 	int i, j;
-	Tittle()
+	SetColor(LightMagenta, Black);
+	Tittle();
 
 
 
