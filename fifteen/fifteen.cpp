@@ -581,14 +581,14 @@ int _tmain(int argc, _TCHAR* argv[])
 
 			cout << "\n\n\t\t\t   You Became A Winner\n" << endl;
 
-			cout << ("\t\t\t   Your Count Of Steps is - ") << count;
+			cout << ("\t\t\t   Your Count Of Steps is - ")
+<< count;
 			cout << endl << endl;
 
 			SetColor(LightRed, Black);
 		}
 	} while (code != 27);
 	
-		PrintTable();
 		system("pause");
 
 		return 0;
