@@ -589,8 +589,10 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	} while (code != 27);
 
-	    cout << "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
-		system("pause");
+	if (code == 27)
+		return(0);
 
-		return 0;
+
+	
+		getch();
 	}
