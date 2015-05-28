@@ -402,7 +402,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	char str[2];
 	SetColor(LightRed, Black);
 	Tittle();
-	cout << ("\t\t\t\t  Press Enter:\b\b\b\b\b\b");
+	cout << ("\t\t\t\t  Press Enter");
 	cin.getline(str, 2);
 	system("cls");
 	
@@ -485,6 +485,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	SetColor(LightBlue, Black);
 	PrintTable();
+	SetColor(LightRed, Black);
 
 
 
