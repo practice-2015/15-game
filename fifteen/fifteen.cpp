@@ -575,8 +575,16 @@ int _tmain(int argc, _TCHAR* argv[])
 				{
 					a[i][j] = 0;
 				}
-
 			}
+			SetColor(LightBlue, Black);
+
+
+			cout << "\n\n\t\t\t   You Became A Winner\n" << endl;
+
+			cout << ("\t\t\t   Your Count Of Steps is - ") << count;
+			cout << endl << endl;
+
+			SetColor(LightRed, Black);
 		}
 	} while (code != 27);
 	
