@@ -576,7 +576,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					a[i][j] = 0;
 				}
 			}
-			SetColor(LightBlue, Black);
+			SetColor(LightGreen, Black);
 
 
 			cout << "\n\n\t\t\t   You Became A Winner\n" << endl;
