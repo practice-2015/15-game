@@ -378,11 +378,14 @@ void SetColor(ConsoleColor text, ConsoleColor background)
 
 void Tittle()
 {
-	cout << ("\n\n\n\t\t\t************ 15  ************\n\n"
-		"\t\t\t\t  Version: I-24 \n"
-		"\t\t\t\t  Fizmat forever\n"
-		"\t\t\t\t  Will Be A Winner\n\n"
-		"\t\t------------------------------------------------\n");
+	cout << ("\n\n\n\t\t   ************  15  ************\n\n"
+		"\t\t\t   Version: I-24 \n"
+		"\t\t\t   Fizmat forever\n"
+		"\t\t\t   Will Be A Winner\n\n"
+		
+		
+		"-----------------------------------------------------------------\n");
+
 }
 
 
@@ -400,12 +403,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	int wi = 0, wj = 0;
 	int i, j;
 	char str[2];
+	system("mode con cols=65 lines=20");
 	SetColor(LightRed, Black);
 	Tittle();
-	cout << ("\t\t\t\t  Press Enter");
+	cout << ("\t\t\t   Press Enter");
 	cin.getline(str, 2);
 	system("cls");
-	
+	system("mode con cols=30 lines=18");
 
 
 
@@ -568,7 +572,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		if (!IsCorrect())
 		{
 			system("cls");
-
+			system("mode con cols=65 lines=25");
 			for (int i = 0; i < 4; i++)
 			{
 				for (int j = 0; j < 4; j++)
@@ -579,9 +583,9 @@ int _tmain(int argc, _TCHAR* argv[])
 			SetColor(LightGreen, Black);
 
 
-			cout << "\n\n\t\t\t   You Became A Winner\n" << endl;
+			cout << "\n\t\t You Became A Winner\n" << endl;
 
-			cout << ("\t\t\t   Your Count Of Steps is - ")
+			cout << ("\n\t\t Your Count Of Steps is - ")
 << count;
 			cout << endl << endl;
 
